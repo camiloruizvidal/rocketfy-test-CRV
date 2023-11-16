@@ -28,7 +28,7 @@ const routes: Routes = [
           (m) => m.DataVisualizationModule
         )
     }, {
-      path: 'sensor-selection',
+      path: 'sensor',
       loadChildren: () =>
         import('./modules/sensor-selection/sensor-selection.module').then(
           (m) => m.SensorSelectionModule
