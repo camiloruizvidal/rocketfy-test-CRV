@@ -10,8 +10,8 @@ export class DashboardComponent {
 
   constructor(private router: Router) {}
 
-  redirectToSensorPage(nombre: string) {
-    this.router.navigate(['/dashboard/sensor', nombre]);
+  redirectToSensorPage(idSensor: string) {
+    this.router.navigate(['/dashboard/sensor', idSensor]);
   }
 
 }

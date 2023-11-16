@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginModule } from './modules/login/login.module';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { DataVisualizationModule } from './modules/data-visualization/data-visualization.module';
-import { SensorSelectionModule } from './modules/sensor-selection/sensor-selection.module';
+import { SensorModule } from './modules/sensor/sensor.module';
 import { DataAnalysisModule } from './modules/data-analysis/data-analysis.module';
 import { loginGuard } from './modules/login/guards/login/login.guard';
 import { TemplateDashboardComponent } from './common/template/template-dashboard/template-dashboard.component';
@@ -30,8 +30,8 @@ const routes: Routes = [
     }, {
       path: 'sensor',
       loadChildren: () =>
-        import('./modules/sensor-selection/sensor-selection.module').then(
-          (m) => m.SensorSelectionModule
+        import('./modules/sensor/sensor.module').then(
+          (m) => m.SensorModule
         )
     }, {
       path: 'data-analysis',
