@@ -1,69 +1,23 @@
-<div class="card mb-3 cursor-link" (click)="redirectToSensorPage('1')">
-  <div class="row g-0">
+<div
+  *ngFor="let sensor of sensors"
+  class="card mb-3 cursor-link"
+>
+  <div class="row g-0" (click)="redirectToSensorPage(sensor.sensor_id)">
     <div class="col-md-4">
       <img
         src="/assets/images/temperatura.png"
         class="img-fluid rounded-start"
-        alt="..."
-      />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Sensor 1: Temperatura y Humedad</h5>
-        <p class="card-text">
-          Monitoriza la temperatura y humedad ambiental para evaluar las
-          condiciones clim&aacute;ticas.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card mb-3 cursor-link" (click)="redirectToSensorPage('2')">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img
-        src="/assets/images/viento.png"
-        class="img-fluid rounded-start"
-        alt="..."
+        alt="Sensors"
       />
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">
-          Sensor 2: Presión atmosférica y Velocidad del Viento
+          Sensor {{ sensor.sensor_id }}: {{ sensor.sensor_name }}
         </h5>
         <p class="card-text">
-          Mide la presi&oacute;n atmosf&eacute;rica y la velocidad del viento,
-          proporcionando datos meteorol&oacute;gicos precisos.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card mb-3 cursor-link" (click)="redirectToSensorPage('3')">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img
-        src="/assets/images/aire.png"
-        class="img-fluid rounded-start"
-        alt="..."
-      />
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Sensor 3: Nivel de Ruido y Calidad del Aire</h5>
-        <p class="card-text">
-          Eval&uacute;a el nivel de ruido y la calidad del aire, ofreciendo
-          informaci&oacute;n sobre el entorno sonoro y la pureza
-          atmosf&eacute;rica.
+          Monitoriza la temperatura y humedad ambiental para evaluar las
+          condiciones clim&aacute;ticas.
         </p>
         <p class="card-text">
           <small class="text-muted">Last updated 3 mins ago</small>
