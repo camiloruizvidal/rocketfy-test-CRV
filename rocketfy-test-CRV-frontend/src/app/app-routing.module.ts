@@ -10,6 +10,11 @@ import { TemplateDashboardComponent } from './common/template/template-dashboard
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full',
+  },
+  {
     path: 'login',
     loadChildren: () =>
       import('./modules/login/login.module').then((m) => m.LoginModule),
